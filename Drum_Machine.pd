@@ -1,0 +1,2374 @@
+#N canvas 163 22 959 733 10;
+#X obj 706 521 cnv 15 159 80 empty empty empty 20 12 0 14 -104026 -66577
+0;
+#X obj 824 523 cnv 15 22 76 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 526 521 cnv 15 177 80 empty empty empty 20 12 0 14 -104026 -66577
+0;
+#X obj 17 45 cnv 15 506 556 empty empty empty 20 12 0 14 -104026 -66577
+0;
+#X obj 528 523 cnv 15 64 76 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 438 259 cnv 15 53 56 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 50 259 cnv 15 62 56 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 75 364 cnv 15 37 213 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 438 76 cnv 15 53 180 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 50 76 cnv 15 385 36 empty empty empty 20 12 0 14 -166441 -66577
+0;
+#X obj 50 115 cnv 15 62 50 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 437 348 cnv 15 26 229 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 442 476 bng 15 250 50 0 killtom1 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 115 364 cnv 15 319 213 empty empty empty 20 12 0 14 -166441
+-66577 0;
+#X obj 352 501 tgl 15 0 TomTwo13 offtom2 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 115 115 cnv 15 320 200 empty empty empty 20 12 0 14 -166441
+-66577 0;
+#N canvas 1 23 1269 755 Main 0;
+#X obj 950 213 readsf~;
+#X obj 658 617 dac~;
+#X msg 950 181 open kickPd.wav \, 1;
+#X obj 764 213 readsf~;
+#X msg 764 179 open hatPd.wav \, 1;
+#X obj 579 213 readsf~;
+#X msg 579 181 open snarePd.wav \, 1;
+#X obj 394 213 readsf~;
+#X msg 394 181 open clapPd.wav \, 1;
+#X obj 208 211 readsf~;
+#X msg 208 186 open lotomPd.wav \, 1;
+#X obj 1320 213 readsf~;
+#X msg 1320 183 open tamPd.wav \, 1;
+#X obj 22 210 readsf~;
+#X msg 22 186 open hitomPd.wav \, 1;
+#X obj 1135 213 readsf~;
+#X msg 1135 183 open percPd.wav \, 1;
+#X obj 950 161 bng 15 250 50 0 empty KICK empty 17 7 0 10 -262144 -1
+-1;
+#X obj 764 158 bng 15 250 50 0 empty HAT empty 17 7 0 10 -262144 -1
+-1;
+#X obj 579 159 bng 15 250 50 0 empty SNARE empty 17 7 0 10 -262144
+-1 -1;
+#X obj 394 158 bng 15 250 50 0 empty CLAP empty 17 7 0 10 -262144 -1
+-1;
+#X obj 208 163 bng 15 250 50 0 empty LOTOM empty 17 7 0 10 -262144
+-1 -1;
+#X obj 22 164 bng 15 250 50 0 empty HITOM empty 17 7 0 10 -262144 -1
+-1;
+#X obj 1320 162 bng 15 250 50 0 empty TAM empty 17 7 0 10 -262144 -1
+-1;
+#X obj 1135 161 bng 15 250 50 0 empty PERC empty 17 7 0 10 -262144
+-1 -1;
+#X obj 999 214 hsl 128 15 0 1 0 0 empty KICKslid empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 950 265 *~;
+#X obj 999 237 sig~;
+#X obj 813 214 hsl 128 15 0 1 0 0 empty HATslid empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 764 265 *~;
+#X obj 813 236 sig~;
+#X obj 628 214 hsl 128 15 0 1 0 0 empty SNAREslid empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 579 265 *~;
+#X obj 628 237 sig~;
+#X obj 443 214 hsl 128 15 0 1 0 0 empty CLAPslid empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 394 263 *~;
+#X obj 443 235 sig~;
+#X obj 257 213 hsl 128 15 0 1 0 0 empty LOTOMslid empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 208 261 *~;
+#X obj 257 235 sig~;
+#X obj 71 212 hsl 128 15 0 1 0 0 empty MIDTOMslid empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 22 259 *~;
+#X obj 71 233 sig~;
+#X obj 1369 214 hsl 128 15 0 1 0 0 empty TAMslid empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1320 263 *~;
+#X obj 1369 236 sig~;
+#X obj 1184 214 hsl 128 15 0 1 0 0 empty PERCslid empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 1135 261 *~;
+#X obj 1184 236 sig~;
+#N canvas 79 23 1146 732 sequencer 0;
+#X obj 615 156 outlet;
+#X obj 474 373 tgl 15 0 empty SQStart empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 615 229 outlet;
+#X obj 615 302 outlet;
+#X obj 615 377 outlet;
+#X obj 615 449 outlet;
+#X obj 616 605 outlet;
+#X obj 616 681 outlet;
+#X obj 844 308 loadbang;
+#N canvas 315 116 536 267 kills 0;
+#X floatatom 75 101 5 0 0 0 - killkick offkick, f 5;
+#X text 73 83 kick;
+#X floatatom 122 101 5 0 0 0 - killhat offhat, f 5;
+#X text 120 83 hat;
+#X floatatom 168 101 5 0 0 0 - killsnare offsnare, f 5;
+#X text 166 83 snare;
+#X floatatom 213 101 5 0 0 0 - killclap offclap, f 5;
+#X text 211 83 clap;
+#X floatatom 257 101 5 0 0 0 - killtom1 offtom1, f 5;
+#X text 255 83 tom1;
+#X floatatom 302 101 5 0 0 0 - killtom2 offtom2, f 5;
+#X text 300 83 tom2;
+#X floatatom 348 101 5 0 0 0 - killtamb offtamb, f 5;
+#X text 346 83 tamb;
+#X floatatom 394 100 5 0 0 0 - killperc offperc, f 5;
+#X text 392 82 perc;
+#X text 66 167 Each of these number boxes connects with the 'kill'
+button assigned to its instrument in the User Interface \, setting
+every toggle in the track to zero.;
+#X text 67 137 This is subpatch 'KILLS'. This subpatch connects wirelessly
+with the User Interface.;
+#X restore 957 95 pd kills;
+#X floatatom 900 329 5 60 180 0 - - -, f 5;
+#X obj 822 369 expr 15000 / $f1;
+#N canvas 180 61 1072 631 KICK 0;
+#X obj 533 -399 inlet;
+#X obj 564 207 outlet;
+#X obj 536 -314 metro;
+#X floatatom 563 -337 5 0 0 0 - - -, f 5;
+#X obj 534 -358 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 499 -213 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 600 -291 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 155 -69 tgl 14 0 empty Kick1 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 109 -70 spigot;
+#X obj 109 -41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 221 -68 tgl 15 0 empty Kick2 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 175 -69 spigot;
+#X obj 175 -38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 -69 tgl 15 0 empty Kick3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 241 -69 spigot;
+#X obj 352 -70 tgl 15 0 empty Kick4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 308 -70 spigot;
+#X obj 308 -38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 416 -69 tgl 15 0 empty Kick5 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 372 -69 spigot;
+#X obj 372 -38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 483 -69 tgl 15 0 empty Kick6 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 437 -70 spigot;
+#X obj 437 -37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 547 -71 tgl 15 0 empty Kick7 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 502 -71 spigot;
+#X obj 518 -33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 601 -99 tgl 15 0 empty Kick8 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 568 -72 spigot;
+#X obj 591 -26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 648 -99 tgl 15 0 empty Kick9 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 615 -71 spigot;
+#X obj 623 -21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 528 -257 counter 15;
+#X obj 529 -173 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 695 -100 tgl 15 0 empty Kick10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 662 -72 spigot;
+#X obj 670 -22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 733 -89 tgl 15 0 empty Kick11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 711 -64 spigot;
+#X obj 709 -19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 790 -96 tgl 15 0 empty Kick12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 758 -68 spigot;
+#X obj 765 -18 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 826 -89 tgl 15 0 empty Kick13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 806 -71 spigot;
+#X obj 826 -23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 873 -93 tgl 15 0 empty Kick14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 853 -70 spigot;
+#X obj 855 -22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 933 -97 tgl 15 0 empty Kick15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 900 -69 spigot;
+#X obj 908 -19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 959 -96 tgl 17 0 empty Kick16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 944 -71 spigot;
+#X obj 967 -25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 602 -316 sel 0;
+#X obj 565 72 delay;
+#X floatatom 616 74 5 0 127 0 - delayKICK -, f 5;
+#X text 505 -348 KICK;
+#X obj 246 -28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 574 -400 inlet;
+#X text 38 -371 This is subpatch 'KICK'.;
+#X text 37 -355 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 37 -322 The tempo information and the toggle to trigger the
+sequencer comes directly from the master sequence toggle in the sequencer
+patch \, synchronizing every instrument sequence.;
+#X text 36 -264 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 40 138 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 685 141 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X floatatom 660 74 5 0 0 0 - - KickDW, f 5;
+#X connect 0 0 4 0;
+#X connect 2 0 33 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 0 56 0;
+#X connect 5 0 34 0;
+#X connect 6 0 33 2;
+#X connect 7 0 8 1;
+#X connect 8 0 9 0;
+#X connect 9 0 1 0;
+#X connect 10 0 11 1;
+#X connect 11 0 12 0;
+#X connect 12 0 57 0;
+#X connect 13 0 14 1;
+#X connect 14 0 60 0;
+#X connect 15 0 16 1;
+#X connect 16 0 17 0;
+#X connect 17 0 57 0;
+#X connect 18 0 19 1;
+#X connect 19 0 20 0;
+#X connect 20 0 1 0;
+#X connect 21 0 22 1;
+#X connect 22 0 23 0;
+#X connect 23 0 57 0;
+#X connect 24 0 25 1;
+#X connect 25 0 26 0;
+#X connect 26 0 1 0;
+#X connect 27 0 28 1;
+#X connect 28 0 29 0;
+#X connect 29 0 57 0;
+#X connect 30 0 31 1;
+#X connect 31 0 32 0;
+#X connect 32 0 1 0;
+#X connect 33 0 5 0;
+#X connect 34 0 8 0;
+#X connect 34 1 11 0;
+#X connect 34 2 14 0;
+#X connect 34 3 16 0;
+#X connect 34 4 19 0;
+#X connect 34 5 22 0;
+#X connect 34 6 25 0;
+#X connect 34 7 28 0;
+#X connect 34 8 31 0;
+#X connect 34 9 36 0;
+#X connect 34 10 39 0;
+#X connect 34 11 42 0;
+#X connect 34 12 45 0;
+#X connect 34 13 48 0;
+#X connect 34 14 51 0;
+#X connect 34 15 54 0;
+#X connect 35 0 36 1;
+#X connect 36 0 37 0;
+#X connect 37 0 57 0;
+#X connect 38 0 39 1;
+#X connect 39 0 40 0;
+#X connect 40 0 1 0;
+#X connect 41 0 42 1;
+#X connect 42 0 43 0;
+#X connect 43 0 57 0;
+#X connect 44 0 45 1;
+#X connect 45 0 46 0;
+#X connect 46 0 1 0;
+#X connect 47 0 48 1;
+#X connect 48 0 49 0;
+#X connect 49 0 57 0;
+#X connect 50 0 51 1;
+#X connect 51 0 52 0;
+#X connect 52 0 1 0;
+#X connect 53 0 54 1;
+#X connect 54 0 55 0;
+#X connect 55 0 57 0;
+#X connect 56 0 6 0;
+#X connect 57 0 1 0;
+#X connect 58 0 57 1;
+#X connect 58 0 68 0;
+#X connect 60 0 1 0;
+#X connect 61 0 3 0;
+#X restore 615 131 pd KICK;
+#N canvas 180 61 1071 653 HAT 0;
+#X obj 471 51 inlet;
+#X obj 512 51 inlet;
+#X obj 549 582 outlet;
+#X obj 471 142 metro;
+#X floatatom 498 91 5 0 0 0 - - -, f 5;
+#X obj 471 91 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 463 231 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 526 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 227 286 tgl 14 0 empty Hat1 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 197 313 spigot;
+#X obj 203 345 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 269 303 tgl 15 0 empty Hat2 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 237 338 spigot;
+#X obj 234 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 314 312 tgl 15 0 empty Hat3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 281 340 spigot;
+#X obj 289 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 367 302 tgl 15 0 empty Hat4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 334 330 spigot;
+#X obj 342 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 413 290 tgl 15 0 empty Hat5 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 380 318 spigot;
+#X obj 392 376 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 462 298 tgl 15 0 empty Hat6 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 433 334 spigot;
+#X obj 441 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 516 293 tgl 15 0 empty Hat7 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 483 321 spigot;
+#X obj 495 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 560 292 tgl 15 0 empty Hat8 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 527 319 spigot;
+#X obj 554 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 607 292 tgl 15 0 empty Hat9 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 574 320 spigot;
+#X obj 586 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 463 199 counter 15;
+#X obj 463 268 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 654 291 tgl 15 0 empty Hat10 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 621 319 spigot;
+#X obj 633 377 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 692 302 tgl 15 0 empty Hat11 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 674 335 spigot;
+#X obj 672 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 749 295 tgl 15 0 empty Hat12 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 717 323 spigot;
+#X obj 728 381 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 785 302 tgl 15 0 empty Hat13 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 765 320 spigot;
+#X obj 789 376 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 845 316 tgl 15 0 empty Hat14 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 825 347 spigot;
+#X obj 820 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 898 295 tgl 15 0 empty Hat15 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 865 323 spigot;
+#X obj 891 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 929 290 tgl 15 0 empty Hat16 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 909 321 spigot;
+#X obj 932 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 526 132 sel 0;
+#X obj 547 471 delay;
+#X floatatom 587 471 5 0 127 0 - delayHAT -, f 5;
+#X text 449 90 HAT;
+#X text 19 46 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 19 79 The tempo information and the toggle to trigger the sequencer
+comes directly from the master sequence toggle in the sequencer patch
+\, synchronizing every instrument sequence.;
+#X text 18 137 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 20 30 This is subpatch 'HAT'.;
+#X text 19 516 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 676 524 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X floatatom 630 473 5 0 0 0 - - HatDW, f 5;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 35 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 0 58 0;
+#X connect 6 0 36 0;
+#X connect 7 0 35 2;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 59 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 59 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 2 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 59 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 2 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 59 0;
+#X connect 32 0 33 1;
+#X connect 33 0 34 0;
+#X connect 34 0 2 0;
+#X connect 35 0 6 0;
+#X connect 36 0 9 0;
+#X connect 36 1 12 0;
+#X connect 36 2 15 0;
+#X connect 36 3 18 0;
+#X connect 36 4 21 0;
+#X connect 36 5 24 0;
+#X connect 36 6 27 0;
+#X connect 36 7 30 0;
+#X connect 36 8 33 0;
+#X connect 36 9 38 0;
+#X connect 36 10 41 0;
+#X connect 36 11 44 0;
+#X connect 36 12 47 0;
+#X connect 36 13 50 0;
+#X connect 36 14 53 0;
+#X connect 36 15 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 59 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 2 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 59 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 2 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 59 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 2 0;
+#X connect 55 0 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 59 0;
+#X connect 58 0 7 0;
+#X connect 59 0 2 0;
+#X connect 60 0 59 1;
+#X connect 60 0 68 0;
+#X restore 615 204 pd HAT;
+#N canvas 180 61 1073 620 SNARE 0;
+#X obj 448 -100 inlet;
+#X obj 487 -100 inlet;
+#X obj 524 407 outlet;
+#X obj 456 -27 metro;
+#X floatatom 483 -58 5 0 0 0 - - -, f 5;
+#X obj 450 -66 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 448 57 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 523 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 199 143 tgl 14 0 empty Snare1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 169 170 spigot;
+#X obj 168 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 242 167 tgl 15 0 empty Snare2 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 209 195 spigot;
+#X obj 221 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 164 tgl 15 0 empty Snare3 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 254 192 spigot;
+#X obj 262 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 340 154 tgl 15 0 empty Snare4 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 307 182 spigot;
+#X obj 315 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 390 150 tgl 15 0 empty Snare5 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 357 178 spigot;
+#X obj 365 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 439 158 tgl 15 0 empty Snare6 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 406 186 spigot;
+#X obj 414 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 493 153 tgl 15 0 empty Snare7 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 460 181 spigot;
+#X obj 468 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 537 152 tgl 15 0 empty Snare8 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 504 179 spigot;
+#X obj 527 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 584 152 tgl 15 0 empty Snare9 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 551 180 spigot;
+#X obj 559 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 448 30 counter 15;
+#X obj 448 93 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 631 151 tgl 15 0 empty Snare10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 598 179 spigot;
+#X obj 606 229 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 669 162 tgl 15 0 empty Snare11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 647 187 spigot;
+#X obj 645 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 726 155 tgl 15 0 empty Snare12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 694 183 spigot;
+#X obj 701 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 762 162 tgl 15 0 empty Snare13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 742 180 spigot;
+#X obj 762 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 818 168 tgl 15 0 empty Snare14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 798 191 spigot;
+#X obj 806 241 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 870 179 tgl 15 0 empty Snare15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 837 207 spigot;
+#X obj 845 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 896 180 tgl 17 0 empty Snare16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 881 205 spigot;
+#X obj 904 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 523 -30 sel 0;
+#X text 415 -67 SNARE;
+#X obj 521 313 delay;
+#X floatatom 561 314 5 0 127 0 - delaySNARE -, f 5;
+#X text 22 -77 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 22 -44 The tempo information and the toggle to trigger the
+sequencer comes directly from the master sequence toggle in the sequencer
+patch \, synchronizing every instrument sequence.;
+#X text 21 14 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 23 -93 This is subpatch 'SNARE'.;
+#X text 20 383 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 667 374 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X floatatom 602 314 5 0 0 0 - - SnareDW, f 5;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 35 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 0 58 0;
+#X connect 6 0 36 0;
+#X connect 7 0 35 2;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 60 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 60 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 2 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 60 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 2 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 60 0;
+#X connect 32 0 33 1;
+#X connect 33 0 34 0;
+#X connect 34 0 2 0;
+#X connect 35 0 6 0;
+#X connect 36 0 9 0;
+#X connect 36 1 12 0;
+#X connect 36 2 15 0;
+#X connect 36 3 18 0;
+#X connect 36 4 21 0;
+#X connect 36 5 24 0;
+#X connect 36 6 27 0;
+#X connect 36 7 30 0;
+#X connect 36 8 33 0;
+#X connect 36 9 38 0;
+#X connect 36 10 41 0;
+#X connect 36 11 44 0;
+#X connect 36 12 47 0;
+#X connect 36 13 50 0;
+#X connect 36 14 53 0;
+#X connect 36 15 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 60 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 2 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 60 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 2 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 60 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 2 0;
+#X connect 55 0 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 60 0;
+#X connect 58 0 7 0;
+#X connect 60 0 2 0;
+#X connect 61 0 60 1;
+#X connect 61 0 68 0;
+#X restore 615 277 pd SNARE;
+#N canvas 179 40 1077 599 CLAP 0;
+#X obj 441 40 inlet;
+#X obj 479 40 inlet;
+#X obj 589 575 outlet;
+#X obj 447 110 metro;
+#X floatatom 474 79 5 0 0 0 - - -, f 5;
+#X obj 441 71 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 439 194 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 491 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 215 279 tgl 14 0 empty Clap1 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 181 313 spigot;
+#X obj 185 352 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 244 314 tgl 15 0 empty Clap2 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 211 342 spigot;
+#X obj 209 397 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 289 311 tgl 15 0 empty Clap3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 256 339 spigot;
+#X obj 264 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 342 301 tgl 15 0 empty Clap4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 309 329 spigot;
+#X obj 317 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 387 298 tgl 15 0 empty Clap5 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 354 326 spigot;
+#X obj 362 376 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 433 306 tgl 15 0 empty Clap6 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 403 334 spigot;
+#X obj 411 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 484 285 tgl 15 0 empty Clap7 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 451 313 spigot;
+#X obj 459 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 528 284 tgl 15 0 empty Clap8 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 495 311 spigot;
+#X obj 518 357 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 575 284 tgl 15 0 empty Clap9 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 542 312 spigot;
+#X obj 550 362 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 439 167 counter 15;
+#X obj 439 225 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 622 283 tgl 15 0 empty Clap10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 589 311 spigot;
+#X obj 597 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 660 294 tgl 15 0 empty Clap11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 638 319 spigot;
+#X obj 636 364 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 717 287 tgl 15 0 empty Clap12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 685 315 spigot;
+#X obj 692 365 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 753 294 tgl 15 0 empty Clap13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 733 312 spigot;
+#X obj 753 360 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 809 300 tgl 15 0 empty Clap14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 789 323 spigot;
+#X obj 797 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 861 311 tgl 15 0 empty Clap15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 828 339 spigot;
+#X obj 836 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 887 312 tgl 17 0 empty Clap16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 872 337 spigot;
+#X obj 895 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 490 109 sel 0;
+#X text 410 69 CLAP;
+#X obj 582 453 delay;
+#X floatatom 622 452 5 0 127 0 - delayCLAP -, f 5;
+#X text 29 32 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 29 65 The tempo information and the toggle to trigger the sequencer
+comes directly from the master sequence toggle in the sequencer patch
+\, synchronizing every instrument sequence.;
+#X text 28 123 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 32 525 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 677 528 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X text 30 16 This is subpatch 'CLAP'.;
+#X floatatom 664 453 5 0 0 0 - - ClapDW, f 5;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 35 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 0 58 0;
+#X connect 6 0 36 0;
+#X connect 7 0 35 2;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 60 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 60 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 2 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 60 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 2 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 60 0;
+#X connect 32 0 33 1;
+#X connect 33 0 34 0;
+#X connect 34 0 2 0;
+#X connect 35 0 6 0;
+#X connect 36 0 9 0;
+#X connect 36 1 12 0;
+#X connect 36 2 15 0;
+#X connect 36 3 18 0;
+#X connect 36 4 21 0;
+#X connect 36 5 24 0;
+#X connect 36 6 27 0;
+#X connect 36 7 30 0;
+#X connect 36 8 33 0;
+#X connect 36 9 38 0;
+#X connect 36 10 41 0;
+#X connect 36 11 44 0;
+#X connect 36 12 47 0;
+#X connect 36 13 50 0;
+#X connect 36 14 53 0;
+#X connect 36 15 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 60 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 2 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 60 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 2 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 60 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 2 0;
+#X connect 55 0 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 60 0;
+#X connect 58 0 7 0;
+#X connect 60 0 2 0;
+#X connect 61 0 60 1;
+#X connect 61 0 68 0;
+#X restore 615 352 pd CLAP;
+#N canvas 179 61 1097 624 TOM1 0;
+#X obj 436 18 inlet;
+#X obj 477 18 inlet;
+#X obj 520 577 outlet;
+#X obj 442 92 metro;
+#X floatatom 469 61 5 0 0 0 - - -, f 5;
+#X obj 436 53 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 434 176 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 494 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 185 264 tgl 14 0 empty TomOne1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 155 291 spigot;
+#X obj 154 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 288 tgl 15 0 empty TomOne2 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 195 316 spigot;
+#X obj 193 371 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 273 285 tgl 15 0 empty TomOne3 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 240 313 spigot;
+#X obj 248 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 326 275 tgl 15 0 empty TomOne4 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 293 303 spigot;
+#X obj 301 353 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 376 271 tgl 15 0 empty TomOne5 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 343 299 spigot;
+#X obj 351 349 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 425 279 tgl 15 0 empty TomOne6 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 392 307 spigot;
+#X obj 400 357 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 479 274 tgl 15 0 empty TomOne7 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 446 302 spigot;
+#X obj 454 352 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 523 273 tgl 15 0 empty TomOne8 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 490 300 spigot;
+#X obj 513 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 570 273 tgl 15 0 empty TomOne9 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 537 301 spigot;
+#X obj 545 351 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 434 149 counter 15;
+#X obj 434 214 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 617 272 tgl 15 0 empty TomOne10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 584 300 spigot;
+#X obj 592 350 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 655 283 tgl 15 0 empty TomOne11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 633 308 spigot;
+#X obj 631 353 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 712 276 tgl 15 0 empty TomOne12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 680 304 spigot;
+#X obj 687 354 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 748 283 tgl 15 0 empty TomOne13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 728 301 spigot;
+#X obj 748 349 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 804 289 tgl 15 0 empty TomOne14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 784 312 spigot;
+#X obj 792 362 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 856 300 tgl 15 0 empty TomOne15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 823 328 spigot;
+#X obj 831 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 882 301 tgl 17 0 empty TomOne16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 867 326 spigot;
+#X obj 890 372 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 491 86 sel 0;
+#X text 406 52 TOM1;
+#X obj 514 426 delay;
+#X floatatom 554 425 5 0 127 0 - delayTOM1 -, f 5;
+#X text 25 45 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 25 78 The tempo information and the toggle to trigger the sequencer
+comes directly from the master sequence toggle in the sequencer patch
+\, synchronizing every instrument sequence.;
+#X text 24 136 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 28 538 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 673 541 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X text 26 29 This is subpatch 'TOM1'.;
+#X floatatom 595 425 5 0 0 0 - - Tom1DW, f 5;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 35 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 0 58 0;
+#X connect 6 0 36 0;
+#X connect 7 0 35 2;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 60 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 60 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 2 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 60 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 2 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 60 0;
+#X connect 32 0 33 1;
+#X connect 33 0 34 0;
+#X connect 34 0 2 0;
+#X connect 35 0 6 0;
+#X connect 36 0 9 0;
+#X connect 36 1 12 0;
+#X connect 36 2 15 0;
+#X connect 36 3 18 0;
+#X connect 36 4 21 0;
+#X connect 36 5 24 0;
+#X connect 36 6 27 0;
+#X connect 36 7 30 0;
+#X connect 36 8 33 0;
+#X connect 36 9 38 0;
+#X connect 36 10 41 0;
+#X connect 36 11 44 0;
+#X connect 36 12 47 0;
+#X connect 36 13 50 0;
+#X connect 36 14 53 0;
+#X connect 36 15 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 60 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 2 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 60 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 2 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 60 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 2 0;
+#X connect 55 0 56 1;
+#X connect 56 0 57 0;
+#X connect 57 0 60 0;
+#X connect 58 0 7 0;
+#X connect 60 0 2 0;
+#X connect 61 0 60 1;
+#X connect 61 0 68 0;
+#X restore 615 424 pd TOM1;
+#N canvas 179 61 1089 608 TOM2 0;
+#X obj 476 138 metro;
+#X floatatom 503 113 5 0 0 0 - - -, f 5;
+#X obj 470 99 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 468 222 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 529 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 219 309 tgl 14 0 empty TomTwo1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 189 336 spigot;
+#X obj 188 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 262 333 tgl 15 0 empty TomTwo2 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 229 361 spigot;
+#X obj 227 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 307 330 tgl 15 0 empty TomTwo3 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 274 358 spigot;
+#X obj 282 408 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 360 320 tgl 15 0 empty TomTwo4 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 327 348 spigot;
+#X obj 335 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 410 316 tgl 15 0 empty TomTwo5 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 377 344 spigot;
+#X obj 385 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 459 324 tgl 15 0 empty TomTwo6 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 426 352 spigot;
+#X obj 434 402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 513 319 tgl 15 0 empty TomTwo7 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 480 347 spigot;
+#X obj 488 397 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 557 318 tgl 15 0 empty TomTwo8 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 524 345 spigot;
+#X obj 547 391 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 604 318 tgl 15 0 empty TomTwo9 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 571 346 spigot;
+#X obj 579 396 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 468 195 counter 15;
+#X obj 468 259 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 651 317 tgl 15 0 empty TomTwo10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 618 345 spigot;
+#X obj 626 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 689 328 tgl 15 0 empty TomTwo11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 667 353 spigot;
+#X obj 665 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 746 321 tgl 15 0 empty TomTwo12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 714 349 spigot;
+#X obj 721 399 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 782 328 tgl 15 0 empty TomTwo13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 762 346 spigot;
+#X obj 782 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 838 334 tgl 15 0 empty TomTwo14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 818 357 spigot;
+#X obj 826 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 890 345 tgl 15 0 empty TomTwo15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 857 373 spigot;
+#X obj 865 423 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 916 346 tgl 17 0 empty TomTwo16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 901 371 spigot;
+#X obj 924 417 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 525 137 sel 0;
+#X obj 558 456 delay;
+#X floatatom 603 450 5 0 127 0 - delayTOM2 -, f 5;
+#X text 437 95 TOM2;
+#X obj 428 46 inlet;
+#X obj 481 46 inlet;
+#X obj 565 589 outlet;
+#X text 28 42 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 28 75 The tempo information and the toggle to trigger the sequencer
+comes directly from the master sequence toggle in the sequencer patch
+\, synchronizing every instrument sequence.;
+#X text 27 133 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 31 535 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 676 538 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X text 29 26 This is subpatch 'TOM2'.;
+#X floatatom 642 454 5 0 0 0 - - Tom2DW, f 5;
+#X connect 0 0 32 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 2 0 55 0;
+#X connect 3 0 33 0;
+#X connect 4 0 32 2;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 61 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 56 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 61 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 56 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 61 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 56 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 61 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 56 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 61 0;
+#X connect 32 0 3 0;
+#X connect 33 0 6 0;
+#X connect 33 1 9 0;
+#X connect 33 2 12 0;
+#X connect 33 3 15 0;
+#X connect 33 4 18 0;
+#X connect 33 5 21 0;
+#X connect 33 6 24 0;
+#X connect 33 7 27 0;
+#X connect 33 8 30 0;
+#X connect 33 9 35 0;
+#X connect 33 10 38 0;
+#X connect 33 11 41 0;
+#X connect 33 12 44 0;
+#X connect 33 13 47 0;
+#X connect 33 14 50 0;
+#X connect 33 15 53 0;
+#X connect 34 0 35 1;
+#X connect 35 0 36 0;
+#X connect 36 0 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 61 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 56 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 61 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 56 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 61 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 56 0;
+#X connect 55 0 4 0;
+#X connect 56 0 61 0;
+#X connect 57 0 56 1;
+#X connect 57 0 68 0;
+#X connect 59 0 2 0;
+#X connect 60 0 1 0;
+#X restore 615 502 pd TOM2;
+#X obj 615 527 outlet;
+#N canvas 179 61 1090 629 TAMB 0;
+#X obj 480 152 metro;
+#X floatatom 507 121 5 0 0 0 - - -, f 5;
+#X obj 474 113 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 472 236 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 544 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 223 320 tgl 14 0 empty Tamb1 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 193 347 spigot;
+#X obj 192 393 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 266 344 tgl 15 0 empty Tamb2 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 233 372 spigot;
+#X obj 231 427 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 311 341 tgl 15 0 empty Tamb3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 278 369 spigot;
+#X obj 286 419 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 364 331 tgl 15 0 empty Tamb4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 331 359 spigot;
+#X obj 339 409 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 414 327 tgl 15 0 empty Tamb5 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 381 355 spigot;
+#X obj 389 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 463 335 tgl 15 0 empty Tamb6 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 430 363 spigot;
+#X obj 438 413 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 517 330 tgl 15 0 empty Tamb7 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 484 358 spigot;
+#X obj 492 408 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 561 329 tgl 15 0 empty Tamb8 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 528 356 spigot;
+#X obj 551 402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 608 329 tgl 15 0 empty Tamb9 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 575 357 spigot;
+#X obj 583 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 472 209 counter 15;
+#X obj 472 270 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 655 328 tgl 15 0 empty Tamb10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 622 356 spigot;
+#X obj 630 406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 693 339 tgl 15 0 empty Tamb11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 671 364 spigot;
+#X obj 669 409 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 750 332 tgl 15 0 empty Tamb12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 718 360 spigot;
+#X obj 725 410 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 786 339 tgl 15 0 empty Tamb13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 766 357 spigot;
+#X obj 786 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 842 345 tgl 15 0 empty Tamb14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 822 368 spigot;
+#X obj 830 418 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 894 356 tgl 15 0 empty Tamb15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 861 384 spigot;
+#X obj 869 434 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 920 357 tgl 17 0 empty Tamb16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 905 382 spigot;
+#X obj 928 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 542 150 sel 0;
+#X obj 514 490 delay;
+#X floatatom 559 492 5 0 127 0 - delayTAMB -, f 5;
+#X text 444 112 TAMB;
+#X obj 476 75 inlet;
+#X obj 519 75 inlet;
+#X obj 517 572 outlet;
+#X text 33 68 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 33 101 The tempo information and the toggle to trigger the
+sequencer comes directly from the master sequence toggle in the sequencer
+patch \, synchronizing every instrument sequence.;
+#X text 32 159 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 36 561 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 681 564 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X text 34 52 This is subpatch 'TAMB'.;
+#X floatatom 600 494 5 0 0 0 - - TambDW, f 5;
+#X connect 0 0 32 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 2 0 55 0;
+#X connect 3 0 33 0;
+#X connect 4 0 32 2;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 61 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 56 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 61 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 56 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 61 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 56 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 61 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 56 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 61 0;
+#X connect 32 0 3 0;
+#X connect 33 0 6 0;
+#X connect 33 1 9 0;
+#X connect 33 2 12 0;
+#X connect 33 3 15 0;
+#X connect 33 4 18 0;
+#X connect 33 5 21 0;
+#X connect 33 6 24 0;
+#X connect 33 7 27 0;
+#X connect 33 8 30 0;
+#X connect 33 9 35 0;
+#X connect 33 10 38 0;
+#X connect 33 11 41 0;
+#X connect 33 12 44 0;
+#X connect 33 13 47 0;
+#X connect 33 14 50 0;
+#X connect 33 15 53 0;
+#X connect 34 0 35 1;
+#X connect 35 0 36 0;
+#X connect 36 0 56 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 61 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 56 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 61 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 56 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 61 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 56 0;
+#X connect 55 0 4 0;
+#X connect 56 0 61 0;
+#X connect 57 0 56 1;
+#X connect 57 0 68 0;
+#X connect 59 0 2 0;
+#X connect 60 0 1 0;
+#X restore 616 578 pd TAMB;
+#N canvas 180 60 1072 632 PERC 0;
+#X obj 477 133 metro;
+#X floatatom 504 102 5 0 0 0 - - -, f 5;
+#X obj 471 94 tgl 15 0 empty StartSQ empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 469 217 hradio 15 0 0 16 SQ empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 525 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 305 tgl 14 0 empty Perc1 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 190 332 spigot;
+#X obj 189 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 263 329 tgl 15 0 empty Perc2 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 230 357 spigot;
+#X obj 228 412 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 308 326 tgl 15 0 empty Perc3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 275 354 spigot;
+#X obj 283 404 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 361 316 tgl 15 0 empty Perc4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 328 344 spigot;
+#X obj 336 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 411 312 tgl 15 0 empty Perc5 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 378 340 spigot;
+#X obj 386 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 460 320 tgl 15 0 empty Perc6 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 427 348 spigot;
+#X obj 435 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 315 tgl 15 0 empty Perc7 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 481 343 spigot;
+#X obj 489 393 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 558 314 tgl 15 0 empty Perc8 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 525 341 spigot;
+#X obj 548 387 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 605 314 tgl 15 0 empty Perc9 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 572 342 spigot;
+#X obj 580 392 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 469 190 counter 15;
+#X obj 469 255 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 652 313 tgl 15 0 empty Perc10 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 619 341 spigot;
+#X obj 627 391 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 690 324 tgl 15 0 empty Perc11 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 668 349 spigot;
+#X obj 666 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 747 317 tgl 15 0 empty Perc12 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 715 345 spigot;
+#X obj 722 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 783 324 tgl 15 0 empty Perc13 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 763 342 spigot;
+#X obj 783 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 839 330 tgl 15 0 empty Perc14 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 819 353 spigot;
+#X obj 827 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 891 341 tgl 15 0 empty Perc15 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 858 369 spigot;
+#X obj 866 419 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 917 342 tgl 17 0 empty Perc16 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 902 367 spigot;
+#X obj 925 413 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 520 136 sel 0;
+#X text 442 92 PERC;
+#X obj 518 485 delay;
+#X floatatom 558 484 5 0 127 0 - delayPERC -, f 5;
+#X obj 520 559 outlet;
+#X obj 471 47 inlet;
+#X obj 512 47 inlet;
+#X text 21 51 This subpatch is a sixteen-step sequencer for the kick
+instrument.;
+#X text 21 84 The tempo information and the toggle to trigger the sequencer
+comes directly from the master sequence toggle in the sequencer patch
+\, synchronizing every instrument sequence.;
+#X text 20 142 The signal and BPM information trigger a 'metro' which
+then feeds the sixteen-step counter. The counter sends a signal to
+sixteen different 'bangs' that then go to the outlet of the patch.
+;
+#X text 24 544 The function spigot is used to allow the signal through
+only if the toggles are on. These toggles are remotely controlled from
+the user interface \, allowing the user to select the steps that will
+produce sound.;
+#X text 669 547 Every second 'bang' in the sequence outputs to a delay
+before reaching the outlet. This is how the swing effect is created.
+The delay time is controlled wirelessly from the user interface.;
+#X text 22 35 This is subpatch 'PERC'.;
+#X floatatom 598 485 5 0 0 0 - - PercDW, f 5;
+#X connect 0 0 32 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 2 0 55 0;
+#X connect 3 0 33 0;
+#X connect 4 0 32 2;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 59 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 57 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 59 0;
+#X connect 14 0 15 1;
+#X connect 15 0 16 0;
+#X connect 16 0 57 0;
+#X connect 17 0 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 59 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 57 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 59 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 57 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 31 0 59 0;
+#X connect 32 0 3 0;
+#X connect 33 0 6 0;
+#X connect 33 1 9 0;
+#X connect 33 2 12 0;
+#X connect 33 3 15 0;
+#X connect 33 4 18 0;
+#X connect 33 5 21 0;
+#X connect 33 6 24 0;
+#X connect 33 7 27 0;
+#X connect 33 8 30 0;
+#X connect 33 9 35 0;
+#X connect 33 10 38 0;
+#X connect 33 11 41 0;
+#X connect 33 12 44 0;
+#X connect 33 13 47 0;
+#X connect 33 14 50 0;
+#X connect 33 15 53 0;
+#X connect 34 0 35 1;
+#X connect 35 0 36 0;
+#X connect 36 0 57 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 39 0 59 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 42 0 57 0;
+#X connect 43 0 44 1;
+#X connect 44 0 45 0;
+#X connect 45 0 59 0;
+#X connect 46 0 47 1;
+#X connect 47 0 48 0;
+#X connect 48 0 57 0;
+#X connect 49 0 50 1;
+#X connect 50 0 51 0;
+#X connect 51 0 59 0;
+#X connect 52 0 53 1;
+#X connect 53 0 54 0;
+#X connect 54 0 57 0;
+#X connect 55 0 4 0;
+#X connect 57 0 59 0;
+#X connect 58 0 57 1;
+#X connect 58 0 68 0;
+#X connect 60 0 2 0;
+#X connect 61 0 1 0;
+#X restore 616 655 pd PERC;
+#X obj 900 285 moonlib/mknob 18 120 60 180 0 0 empty BPM empty -2 -6
+0 8 -262144 -1 -1 0 1;
+#X obj 900 308 int;
+#X obj 926 369 s tempo;
+#X text 342 348 Master sequence toggle.;
+#X text 105 403 This toggle activates each individual sequence in the
+connected subPatches.;
+#X text 599 111 Kick Sequencer;
+#X text 599 186 HAT Sequencer;
+#X text 599 259 SNARE Sequencer;
+#X text 599 333 CLAP Sequencer;
+#X text 599 406 TOM1 Sequencer;
+#X text 599 483 TOM2 Sequencer;
+#X text 601 560 TAMB Sequencer;
+#X text 601 634 PERC Sequencer;
+#X text 956 113 'Kill' function subPatch;
+#X text 823 271 TEMPO (BPM);
+#X text 17 20 This is subPatch "SEQUENCER".;
+#X text 16 38 This subpatch contains the master sequence toggle \,
+the tempo functions \, and the individual sequence subpatches for each
+instrument.;
+#X text 16 91 This patch connects the tempo features with both sequences
+and User Interface. Similarly \, the Master sequence toggle connects
+with the play/stop button in the User Interface.;
+#X text 105 373 This toggle receives a signal from the Play/Stop button
+in the User Interface.;
+#X text 831 397 This operation transforms the tempo in beats per minute
+to miliseconds.;
+#X text 830 431 The knob is remotely controlled from the User Interface.
+The knob feeds an integer (beats per minute) to 's tempo' and to the
+operation 'expr 15000 / $f1'. This operation is sent to the eight different
+instrument sequencers simultaneously \, synchronizing them in tempo.
+;
+#X text 830 503 The 's tempo' box sends the number back to the user
+interface to display.;
+#X obj 364 638 bng 15 250 50 0 startRecording empty empty 17 7 0 10
+-262144 -1 -1;
+#X obj 364 608 spigot;
+#X obj 397 580 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 438 522 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 397 555 spigot;
+#X obj 492 607 spigot;
+#X obj 444 582 tgl 15 0 RecordingOFF RecordingON empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 492 636 bng 15 250 50 0 stopRecording empty empty 17 7 0 10
+-262144 -1 -1;
+#X obj 472 533 sel 0;
+#X obj 485 576 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 392 669 Recording Options;
+#X text 13 530 The set of toggles \, bangs and spigots to the right
+\, allows the recorder to start and stop exactly when the sequencer
+does.;
+#X text 13 575 When the Recording button in the User Interface is toggled
+\, the recorder is allowed to start throgh the use of a 'spigot' function.
+;
+#X text 13 623 The spigot toggle is simultaneously toggled off when
+the sequence starts.;
+#X text 14 655 When the Recording Toggle is enabled \, another 'spigot'
+function forces the start/stop button not to stop the recording immediately.
+This way \, the recording will stop using a second touch on the same
+toggle (when stopping the sequence play).;
+#X msg 844 329 60;
+#X connect 1 0 12 0;
+#X connect 1 0 13 0;
+#X connect 1 0 14 0;
+#X connect 1 0 15 0;
+#X connect 1 0 16 0;
+#X connect 1 0 17 0;
+#X connect 1 0 19 0;
+#X connect 1 0 20 0;
+#X connect 1 0 44 0;
+#X connect 1 0 46 0;
+#X connect 1 0 51 0;
+#X connect 8 0 58 0;
+#X connect 10 0 11 0;
+#X connect 10 0 23 0;
+#X connect 11 0 12 1;
+#X connect 11 0 13 1;
+#X connect 11 0 14 1;
+#X connect 11 0 15 1;
+#X connect 11 0 16 1;
+#X connect 11 0 17 1;
+#X connect 11 0 19 1;
+#X connect 11 0 20 1;
+#X connect 12 0 0 0;
+#X connect 13 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 4 0;
+#X connect 16 0 5 0;
+#X connect 17 0 18 0;
+#X connect 19 0 6 0;
+#X connect 20 0 7 0;
+#X connect 21 0 22 0;
+#X connect 22 0 10 0;
+#X connect 44 0 43 0;
+#X connect 45 0 44 1;
+#X connect 45 0 47 1;
+#X connect 46 0 47 0;
+#X connect 47 0 45 0;
+#X connect 48 0 50 0;
+#X connect 49 0 48 1;
+#X connect 49 0 45 0;
+#X connect 50 0 49 0;
+#X connect 51 0 52 0;
+#X connect 52 0 48 0;
+#X connect 58 0 11 0;
+#X connect 58 0 23 0;
+#X restore 621 29 pd sequencer;
+#X obj 667 452 *~;
+#X obj 712 453 hsl 128 15 0 1 0 0 empty MASTER empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 29 691 \; pd dsp \$1;
+#X obj 29 665 tgl 15 0 empty DSP empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 584 636 Digital to Analogue Converter;
+#X text 968 160 KICK;
+#X text 782 156 HAT;
+#X text 26 725 Creates a DSP activation button that is connected wirelessly
+to the User Interface.;
+#X text 596 158 SNARE;
+#X text 411 157 CLAP;
+#X text 225 161 TOM1;
+#X text 39 163 TOM2;
+#X text 1337 161 TAMB;
+#X text 1152 160 PERC;
+#X text 734 28 sequencer subPatch;
+#X text 19 435 Next to the read function (readsf~) \, a slider controls
+the volume of each sample. This slider receives its control from the
+User Interface \, allowing the user to mix the volumes in the sequence.
+;
+#X text 850 451 Main Volume slider.;
+#X text 849 469 This slider receives data wirelessly from the master
+volume in the User Interface.;
+#X text 19 24 This is subPatch "Main". This subPatch deals with sample
+read and conections to the 'dac'.;
+#X text 20 389 Each of the above bangs receive a signal from the sequencer
+subPatch. These \, then read the according .wav file which is then
+send to the 'dac'.;
+#X text 19 59 Connections with the User Interface from this subPatch
+are wireless.;
+#X obj 561 540 writesf~ 2;
+#X msg 561 490 start;
+#X msg 609 490 stop;
+#X obj 561 463 bng 15 250 50 0 empty startRecording empty 17 7 0 10
+-262144 -1 -1;
+#X obj 609 463 bng 15 250 50 0 empty stopRecording empty 17 7 0 10
+-262144 -1 -1;
+#X msg 429 511 open Recording1.wav;
+#X msg 429 536 open Recording2.wav;
+#X msg 429 561 open Recording3.wav;
+#X obj 408 511 bng 15 250 50 0 empty Recording1 empty 17 7 0 10 -262144
+-1 -1;
+#X obj 408 536 bng 15 250 50 0 empty Recording2 empty 17 7 0 10 -262144
+-1 -1;
+#X obj 408 561 bng 15 250 50 0 empty Recording3 empty 17 7 0 10 -262144
+-1 -1;
+#X obj 809 576 readsf~;
+#X obj 809 601 *~;
+#X obj 809 518 bng 14 250 50 0 empty playRecording1 empty 17 7 0 10
+-262144 -1 -1;
+#X obj 862 577 hsl 128 15 0 1 0 0 empty PlayerVolume empty -2 -8 0
+10 -262144 -1 -1 0 1;
+#X obj 862 600 sig~;
+#X msg 809 539 open Recording1.wav \, 1;
+#X obj 952 518 bng 14 250 50 0 empty playRecording2 empty 17 7 0 10
+-262144 -1 -1;
+#X msg 952 539 open Recording2.wav \, 1;
+#X obj 1096 518 bng 14 250 50 0 empty playRecording3 empty 17 7 0 10
+-262144 -1 -1;
+#X msg 1096 539 open Recording3.wav \, 1;
+#X obj 408 585 bng 15 250 50 0 empty Recording4 empty 17 7 0 10 -262144
+-1 -1;
+#X msg 429 585 open Recording4.wav;
+#X obj 1240 518 bng 15 250 50 0 empty playRecording4 empty 17 7 0 10
+-262144 -1 -1;
+#X msg 1240 539 open Recording4.wav \, 1;
+#X text 25 563 Recorder Setup. These 'open' functions create files
+for the system to write in. These are sent to a 'writesf' function
+that records the sequence when triggered.;
+#X text 904 600 Player Setup. The above 'open' functions \, open the
+recorded files when triggered wirelessly from the User Interface. Then
+the signals are sent to a 'readsf' function for the system to read.
+These signals are then sent to the dac as output. The volume slider
+controlling the volume of the player is controlled wirelessly from
+the User Interface.;
+#X text 26 607 The Start and Stop messages are triggered using bangs
+that are wirelessly controlled from the subpatch 'sequencer'.;
+#X connect 0 0 26 0;
+#X connect 2 0 0 0;
+#X connect 3 0 29 0;
+#X connect 4 0 3 0;
+#X connect 5 0 32 0;
+#X connect 6 0 5 0;
+#X connect 7 0 35 0;
+#X connect 8 0 7 0;
+#X connect 9 0 38 0;
+#X connect 10 0 9 0;
+#X connect 11 0 44 0;
+#X connect 12 0 11 0;
+#X connect 13 0 41 0;
+#X connect 14 0 13 0;
+#X connect 15 0 47 0;
+#X connect 16 0 15 0;
+#X connect 17 0 2 0;
+#X connect 18 0 4 0;
+#X connect 19 0 6 0;
+#X connect 20 0 8 0;
+#X connect 21 0 10 0;
+#X connect 22 0 14 0;
+#X connect 23 0 12 0;
+#X connect 24 0 16 0;
+#X connect 25 0 27 0;
+#X connect 26 0 50 0;
+#X connect 27 0 26 1;
+#X connect 28 0 30 0;
+#X connect 29 0 50 0;
+#X connect 30 0 29 1;
+#X connect 31 0 33 0;
+#X connect 32 0 50 0;
+#X connect 33 0 32 1;
+#X connect 34 0 36 0;
+#X connect 35 0 50 0;
+#X connect 36 0 35 1;
+#X connect 37 0 39 0;
+#X connect 38 0 50 0;
+#X connect 39 0 38 1;
+#X connect 40 0 42 0;
+#X connect 41 0 50 0;
+#X connect 42 0 41 1;
+#X connect 43 0 45 0;
+#X connect 44 0 50 0;
+#X connect 45 0 44 1;
+#X connect 46 0 48 0;
+#X connect 47 0 50 0;
+#X connect 48 0 47 1;
+#X connect 49 0 22 0;
+#X connect 49 1 21 0;
+#X connect 49 2 20 0;
+#X connect 49 3 19 0;
+#X connect 49 4 18 0;
+#X connect 49 5 17 0;
+#X connect 49 6 24 0;
+#X connect 49 7 23 0;
+#X connect 50 0 1 0;
+#X connect 50 0 1 1;
+#X connect 50 0 71 0;
+#X connect 50 0 71 1;
+#X connect 51 0 50 1;
+#X connect 53 0 52 0;
+#X connect 72 0 71 0;
+#X connect 73 0 71 0;
+#X connect 74 0 72 0;
+#X connect 75 0 73 0;
+#X connect 76 0 71 0;
+#X connect 77 0 71 0;
+#X connect 78 0 71 0;
+#X connect 79 0 76 0;
+#X connect 80 0 77 0;
+#X connect 81 0 78 0;
+#X connect 82 0 83 0;
+#X connect 83 0 1 0;
+#X connect 83 0 1 1;
+#X connect 84 0 87 0;
+#X connect 85 0 86 0;
+#X connect 86 0 83 1;
+#X connect 87 0 82 0;
+#X connect 88 0 89 0;
+#X connect 89 0 82 0;
+#X connect 90 0 91 0;
+#X connect 91 0 82 0;
+#X connect 92 0 93 0;
+#X connect 93 0 71 0;
+#X connect 94 0 95 0;
+#X connect 95 0 82 0;
+#X restore 17 14 pd Main;
+#X obj 127 291 bng 15 250 50 0 KICK NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 164 291 bng 15 250 50 0 HAT NOR empty 17 7 0 10 -1 -249717 -1
+;
+#X obj 205 291 bng 15 250 50 0 SNARE NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 246 291 bng 15 250 50 0 CLAP NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 287 291 bng 15 250 50 0 LOTOM NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 328 291 bng 15 250 50 0 HITOM NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 367 292 bng 15 250 50 0 TAM NOR empty 17 7 0 10 -1 -249717 -1
+;
+#X obj 406 292 bng 15 250 50 0 PERC NOR empty 17 7 0 10 -1 -249717
+-1;
+#X obj 127 143 vsl 15 128 0 1 0 0 KICKslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 164 144 vsl 15 128 0 1 0 0 HATslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 204 144 vsl 15 128 0 1 0 0 SNAREslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 246 144 vsl 15 128 0 1 0 0 CLAPslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 287 144 vsl 15 128 0 1 0 0 LOTOMslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 328 144 vsl 15 128 0 1 0 0 MIDTOMslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 367 144 vsl 15 128 0 1 0 0 TAMslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 406 144 vsl 15 128 0 1 0 0 PERCslid NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 120 119 Kick;
+#X text 162 119 Hat;
+#X text 194 120 Snare;
+#X text 240 120 Clap;
+#X text 278 120 Tom 1;
+#X text 320 119 Tom 2;
+#X text 361 119 Tamb;
+#X text 400 118 Perc;
+#X obj 124 374 tgl 15 0 Kick1 offkick empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 143 374 tgl 15 0 Kick2 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 162 374 tgl 15 0 Kick3 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 181 374 tgl 15 0 Kick4 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 200 374 tgl 15 0 Kick5 offkick empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 219 374 tgl 15 0 Kick6 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 238 374 tgl 15 0 Kick7 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 257 374 tgl 15 0 Kick8 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 276 374 tgl 15 0 Kick9 offkick empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 295 374 tgl 15 0 Kick10 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 314 374 tgl 15 0 Kick11 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 333 374 tgl 15 0 Kick12 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 352 374 tgl 15 0 Kick13 offkick empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 371 374 tgl 15 0 Kick14 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 390 374 tgl 15 0 Kick15 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 409 374 tgl 15 0 Kick16 offkick empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 123 331 hradio 19 0 0 16 NOS SQ empty 0 -8 0 10 -262144 -1 -1
+0;
+#X obj 124 399 tgl 15 0 Hat1 offhat empty 17 7 0 10 -249717 -1 -1 0
+1;
+#X obj 143 399 tgl 15 0 Hat2 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 162 399 tgl 15 0 Hat3 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 181 399 tgl 15 0 Hat4 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 200 399 tgl 15 0 Hat5 offhat empty 17 7 0 10 -249717 -1 -1 0
+1;
+#X obj 219 399 tgl 15 0 Hat6 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 238 399 tgl 15 0 Hat7 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 257 399 tgl 15 0 Hat8 offhat empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 276 399 tgl 15 0 Hat9 offhat empty 17 7 0 10 -249717 -1 -1 0
+1;
+#X obj 295 399 tgl 15 0 Hat10 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 314 399 tgl 15 0 Hat11 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 333 399 tgl 15 0 Hat12 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 352 399 tgl 15 0 Hat13 offhat empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 371 399 tgl 15 0 Hat14 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 390 399 tgl 15 0 Hat15 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 409 399 tgl 15 0 Hat16 offhat empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 84 374 Kick;
+#X text 90 399 Hat;
+#X text 53 261 Play/Stop;
+#X obj 124 425 tgl 15 0 Snare1 offsnare empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 143 425 tgl 15 0 Snare2 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 162 425 tgl 15 0 Snare3 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 181 425 tgl 15 0 Snare4 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 200 425 tgl 15 0 Snare5 offsnare empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 219 425 tgl 15 0 Snare6 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 238 425 tgl 15 0 Snare7 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 257 425 tgl 15 0 Snare8 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 276 425 tgl 15 0 Snare9 offsnare empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 295 425 tgl 15 0 Snare10 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 314 425 tgl 15 0 Snare11 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 333 425 tgl 15 0 Snare12 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 352 425 tgl 15 0 Snare13 offsnare empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 371 425 tgl 15 0 Snare14 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 390 425 tgl 15 0 Snare15 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 409 425 tgl 15 0 Snare16 offsnare empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 124 450 tgl 15 0 Clap1 offclap empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 143 450 tgl 15 0 Clap2 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 162 450 tgl 15 0 Clap3 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 181 450 tgl 15 0 Clap4 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 200 450 tgl 15 0 Clap5 offclap empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 219 450 tgl 15 0 Clap6 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 238 450 tgl 15 0 Clap7 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 257 450 tgl 15 0 Clap8 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 276 450 tgl 15 0 Clap9 offclap empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 295 450 tgl 15 0 Clap10 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 314 450 tgl 15 0 Clap11 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 333 450 tgl 15 0 Clap12 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 352 450 tgl 15 0 Clap13 offclap empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 371 450 tgl 15 0 Clap14 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 390 450 tgl 15 0 Clap15 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 409 450 tgl 15 0 Clap16 offclap empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 78 424 Snare;
+#X text 84 449 Clap;
+#X obj 124 476 tgl 15 0 TomOne1 offtom1 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 143 476 tgl 15 0 TomOne2 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 162 476 tgl 15 0 TomOne3 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 181 476 tgl 15 0 TomOne4 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 200 476 tgl 15 0 TomOne5 offtom1 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 219 476 tgl 15 0 TomOne6 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 238 476 tgl 15 0 TomOne7 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 257 476 tgl 15 0 TomOne8 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 276 476 tgl 15 0 TomOne8 offtom1 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 295 476 tgl 15 0 TomOne10 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 314 476 tgl 15 0 TomOne11 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 333 476 tgl 15 0 TomOne12 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 352 476 tgl 15 0 TomOne13 offtom1 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 371 476 tgl 15 0 TomOne14 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 390 476 tgl 15 0 TomOne15 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 409 476 tgl 15 0 TomOne16 offtom1 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 124 501 tgl 15 0 TomTwo1 offtom2 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 143 501 tgl 15 0 TomTwo2 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 162 501 tgl 15 0 TomTwo3 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 181 501 tgl 15 0 TomTwo4 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 200 501 tgl 15 0 TomTwo5 offtom2 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 219 501 tgl 15 0 TomTwo6 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 238 501 tgl 15 0 TomTwo7 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 257 501 tgl 15 0 TomTwo8 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 276 501 tgl 15 0 TomTwo9 offtom2 empty 17 7 0 10 -249717 -1
+-1 0 1;
+#X obj 295 501 tgl 15 0 TomTwo10 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 314 501 tgl 15 0 TomTwo11 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 333 501 tgl 15 0 TomTwo12 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 371 501 tgl 15 0 TomTwo14 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 390 501 tgl 15 0 TomTwo15 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 409 501 tgl 15 0 TomTwo16 offtom2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 124 527 tgl 15 0 Tamb1 offtamb empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 143 527 tgl 15 0 Tamb2 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 162 527 tgl 15 0 Tamb3 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 181 527 tgl 15 0 Tamb4 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 200 527 tgl 15 0 Tamb5 offtamb empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 219 527 tgl 15 0 Tamb6 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 238 527 tgl 15 0 Tamb7 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 257 527 tgl 15 0 Tamb7 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 276 527 tgl 15 0 Tamb8 offtamb empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 295 527 tgl 15 0 Tamb10 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 314 527 tgl 15 0 Tamb11 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 333 527 tgl 15 0 Tamb12 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 352 527 tgl 15 0 Tamb13 offtamb empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 371 527 tgl 15 0 Tamb14 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 390 527 tgl 15 0 Tamb15 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 409 527 tgl 15 0 Tamb16 offtamb empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 124 552 tgl 15 0 Perc1 offperc empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 143 552 tgl 15 0 Perc2 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 162 552 tgl 15 0 Perc3 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 181 552 tgl 15 0 Perc4 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 200 552 tgl 15 0 Perc5 offperc empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 219 552 tgl 15 0 Perc6 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 238 552 tgl 15 0 Perc7 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 257 552 tgl 15 0 Perc8 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 276 552 tgl 15 0 Perc9 offperc empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 295 552 tgl 15 0 Perc10 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 314 552 tgl 15 0 Perc11 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 333 552 tgl 15 0 Perc12 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 352 552 tgl 15 0 Perc13 offperc empty 17 7 0 10 -249717 -1 -1
+0 1;
+#X obj 371 552 tgl 15 0 Perc14 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 390 552 tgl 15 0 Perc15 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 409 552 tgl 15 0 Perc16 offperc empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 77 476 Tom 1;
+#X text 77 501 Tom 2;
+#X text 83 527 Tamb;
+#X text 83 552 Perc;
+#X obj 125 85 moonlib/mknob 18 20 0 100 0 0 delayKICK NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 163 85 moonlib/mknob 18 20 0 100 0 0 delayHAT NOR empty -2 -6
+0 8 -262144 -1 -1 0 1;
+#X obj 202 85 moonlib/mknob 18 20 0 100 0 0 delaySNARE NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 244 85 moonlib/mknob 18 20 0 100 0 0 delayCLAP NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 286 85 moonlib/mknob 18 20 0 100 0 0 delayTOM1 NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 325 85 moonlib/mknob 18 20 0 100 0 0 delayTOM2 NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 364 85 moonlib/mknob 18 20 0 100 0 0 delayTAMB NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 404 85 moonlib/mknob 18 20 0 100 0 0 delayPERC NOR empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X obj 442 374 bng 15 250 50 0 killkick NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 399 bng 15 250 50 0 killhat NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 425 bng 15 250 50 0 killsnare NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 450 bng 15 250 50 0 killclap NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 501 bng 15 250 50 0 killtom2 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 527 bng 15 250 50 0 killtamb NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 442 552 bng 15 250 50 0 killperc NOR empty 17 7 0 10 -262144
+-1 -1;
+#X text 437 349 kill;
+#X floatatom 76 138 5 60 180 0 - tempo NOS, f 5;
+#X obj 55 137 moonlib/mknob 18 120 60 180 0 0 BPM NOR empty -2 -6 0
+8 -262144 -1 -1 0 1;
+#X text 70 116 BPM;
+#X text 66 86 SWING;
+#X obj 455 114 vsl 18 125 0 1 0 0 MASTER empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 444 88 MASTER;
+#X obj 65 278 tgl 31 0 SQStart NOR empty 17 7 2 10 -262144 -166441
+-262144 0 1;
+#X obj 455 286 tgl 18 0 DSP empty empty 17 7 0 10 -249717 -1 -1 0 1
+;
+#X text 454 266 DSP;
+#X obj 550 558 tgl 20 0 RecordingON stopRecording empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 531 529 Recording;
+#X obj 595 523 cnv 15 106 76 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X obj 599 527 bng 15 250 50 0 Recording1 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 599 545 bng 15 250 50 0 Recording2 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 599 563 bng 15 250 50 0 Recording3 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X text 619 526 Recording 1;
+#X text 619 545 Recording 2;
+#X text 619 562 Recording 3;
+#X text 538 78 Instructions:;
+#X obj 828 525 bng 15 250 50 0 playRecording1 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 708 523 cnv 15 113 76 empty empty empty 20 12 0 14 -224695 -66577
+0;
+#X text 713 525 Play Recording 1;
+#X text 713 544 Play Recording 2;
+#X text 713 563 Play Recording 3;
+#X obj 828 544 bng 15 250 50 0 playRecording2 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 828 563 bng 15 250 50 0 playRecording3 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X text 713 580 Play Recording 4;
+#X obj 828 582 bng 15 250 50 0 playRecording4 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X obj 599 581 bng 15 250 50 0 Recording4 NOR empty 17 7 0 10 -262144
+-1 -1;
+#X text 619 580 Recording 4;
+#X floatatom 159 54 4 0 0 0 - HatDW NO, f 4;
+#X floatatom 121 54 4 0 0 0 - KickDW NO, f 4;
+#X floatatom 198 54 4 0 0 0 - SnareDW NO, f 4;
+#X floatatom 239 54 4 0 0 0 - ClapDW NO, f 4;
+#X floatatom 282 54 4 0 0 0 - Tom1DW NO, f 4;
+#X floatatom 321 54 4 0 0 0 - Tom2DW NO, f 4;
+#X floatatom 360 54 4 0 0 0 - TambDW NO, f 4;
+#X floatatom 400 54 4 0 0 0 - PercDW NO, f 4;
+#X obj 849 523 vsl 14 71 0 1 0 0 PlayerVolume NOR empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 537 47 8-Sample Drum Machine;
+#X text 162 607 Developed by Nacho Gomez-Lanzaco;
+#X text 537 66;
+#X text 537 99 1 Turn on the DSP toggle \, set the BPM knob to the
+desired tempo \, and turn the master volume slider up.;
+#X text 538 171 3 Set the individual instrument gains as desired and
+press play.;
+#X text 538 214 4 Use the Swing knobs above to create syncopated sequences.
+;
+#X text 538 141 2 Set a drum sequence using the 16-step rows below.
+;
+#X text 538 244 5 The 'kill' options to the right of the 16-step rows
+eliminate all selected steps in said rows.;
+#X text 538 287 6 To record \, select a file to save to ('recording
+1-4') \, and enable recording using the toggle to the left. Press Play
+to start the recording and sequence. Press Stop to stop the sequence
+and recording.;
